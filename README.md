@@ -52,3 +52,26 @@ Pull and run:
 docker pull vitalikergin/flask-helllo-world:v1.0
 docker run -p 5000:5000 vitalikergin/flask-helllo-world:v1.0
 ```
+## Phase 2: Kubernetes Deployment with Helm
+
+The application is deployed to Kubernetes using Helm charts.
+
+### Features:
+- Horizontal Pod Autoscaling (2-5 replicas, 50% CPU target)
+- ConfigMap for environment configuration
+- Liveness and Readiness probes
+- Resource requests and limits
+- NodePort service for external access
+
+### Deployment:
+```bash
+cd kubernetes/flask-app
+helm install flask-app .
+```
+
+### Access:
+```bash
+minikube service flask-app --url
+```
+
+See `kubernetes/flask-app/README.md` for detailed Helm chart documentation.
