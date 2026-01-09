@@ -75,3 +75,13 @@ minikube service flask-app --url
 ```
 
 See `kubernetes/flask-app/README.md` for detailed Helm chart documentation.
+## Phase 3: Jenkins Pipeline Implementation
+
+Automated CI/CD pipeline for continuous deployment.
+
+### Features:
+- Automated Docker image builds
+- Kubernetes deployment via Helm
+- Version tagging with build numbers
+
+Repository: https://github.com/AchilliesHeelies/DevOps_Project_1
