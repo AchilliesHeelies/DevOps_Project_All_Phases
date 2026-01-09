@@ -3,7 +3,7 @@ pipeline {
     
     environment {
         DOCKER_IMAGE = 'vitalikergin/flask-hello-world'
-        DOCKER_TAG = "${env.BUILD_NUMBER}"
+        DOCKER_TAG = 'latest'
     }
     
     stages {
@@ -16,13 +16,9 @@ pipeline {
         
         stage('Build Docker Image') {
             steps {
-                echo "Building Docker image in Minikube's Docker environment..."
+                echo "Building Docker image: ${DOCKER_IMAGE}:${DOCKER_TAG}"
                 script {
-                    sh """
-                        eval \$(minikube -p minikube docker-env)
-                        docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} .
-                        docker tag ${DOCKER_IMAGE}:${DOCKER_TAG} ${DOCKER_IMAGE}:latest
-                    """
+                    sh "docker build -t ${DOCKER_IMAGE}:${DOCKER_TAG} ."
                 }
             }
         }
@@ -59,4 +55,4 @@ pipeline {
             echo 'Pipeline failed! ❌'
         }
     }
-}
+} 
