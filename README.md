@@ -30,12 +30,12 @@ Visit: http://127.0.0.1:5000
 
 ### Build the image:
 ```bash
-docker build -t flask-helllo-world .
+docker build -t flask-hello-world .
 ```
 
 ### Run the container:
 ```bash
-docker run -p 5000:5000 flask-helllo-world
+docker run -p 5000:5000 flask-hello-world
 ```
 
 ### Or use Docker Compose:
@@ -45,12 +45,12 @@ docker compose up
 
 ## Docker Hub
 
-Image available at: `vitalikergin/flask-helllo-world:v1.0`
+Image available at: `vitalikergin/flask-hello-world:v1.0`
 
 Pull and run:
 ```bash
-docker pull vitalikergin/flask-helllo-world:v1.0
-docker run -p 5000:5000 vitalikergin/flask-helllo-world:v1.0
+docker pull vitalikergin/flask-hello-world:v1.0
+docker run -p 5000:5000 vitalikergin/flask-hello-world:v1.0
 ```
 ## Phase 2: Kubernetes Deployment with Helm
 
