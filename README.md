@@ -45,12 +45,12 @@ docker compose up
 
 ## Docker Hub
 
-Image available at: `vitalikergin/flask-hello-world:v1.0`
+Image available at: `vitalikergin/flask-hello-world:latest`
 
 Pull and run:
 ```bash
-docker pull vitalikergin/flask-hello-world:v1.0
-docker run -p 5000:5000 vitalikergin/flask-hello-world:v1.0
+docker pull vitalikergin/flask-hello-world:latest
+docker run -p 5000:5000 vitalikergin/flask-hello-world:latest
 ```
 ## Phase 2: Kubernetes Deployment with Helm
 
