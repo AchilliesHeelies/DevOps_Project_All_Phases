@@ -75,30 +75,24 @@ minikube service flask-app --url
 ```
 
 See `kubernetes/flask-app/README.md` for detailed Helm chart documentation.
-feature/update-docs
+
 ## Phase 3: Automation with Jenkins CI/CD
 
 Implemented automated deployment pipeline using Jenkins.
 
 ### Pipeline Stages:
 1. **Checkout** - Pull latest code from Git
-2. **Build** - Build Docker image with version tagging
+2. **Build** - Build Docker image
 3. **Test** - Validate image creation
 4. **Deploy** - Deploy to Kubernetes using Helm
 
 ### Running the Pipeline:
 The pipeline automatically triggers on code changes and deploys the Flask application to Minikube.
 
-Docker image: `vitalikergin/flask-hello-world:${BUILD_NUMBER}`
-
-## Phase 3: Jenkins Pipeline Implementation
-
-Automated CI/CD pipeline for continuous deployment.
+Docker image: `vitalikergin/flask-hello-world:latest`
 
 ### Features:
 - Automated Docker image builds
 - Kubernetes deployment via Helm
-- Version tagging with build numbers
 
 Repository: https://github.com/AchilliesHeelies/DevOps_Project_1
-main
